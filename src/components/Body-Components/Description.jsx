@@ -5,9 +5,13 @@ function Description({ description }) {
   const toggleText = (isFull) => {
     setIsFull(!isFull);
   };
+  if (description.length <= 500) {
+    return <>{description}</>;
+  }
   return (
     <div>
       {isFull ? description : description.slice(0, 500)}
+
       <span
         className="fw-bold"
         onClick={() => toggleText(isFull)}
