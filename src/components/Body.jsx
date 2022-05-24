@@ -1,4 +1,3 @@
-import React from "react";
 import Title from "./Body-Components/Title";
 import Description from "./Body-Components/Description";
 

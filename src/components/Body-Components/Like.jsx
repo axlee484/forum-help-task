@@ -1,4 +1,3 @@
-import React from "react";
 import { AiOutlineLike, AiFillLike } from "react-icons/ai";
 
 function Like({ like }) {
