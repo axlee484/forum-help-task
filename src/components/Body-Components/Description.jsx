@@ -5,19 +5,36 @@ function Description({ description }) {
   const toggleText = (isFull) => {
     setIsFull(!isFull);
   };
-  if (description.length <= 500) {
-    return <>{description}</>;
+  if (description.text.length <= 500) {
+    return <>{description.text}</>;
   }
   return (
     <div>
-      {isFull ? description : description.slice(0, 500)}
+      {isFull ? (
+        <div>
+          {description.text}
+          {description.hasImage ? (
+            <div style={{ display: "flex" }}>
+              <img
+                src={description.image}
+                alt=""
+                style={{ width: "100%", borderRadius: "10px" }}
+              />
+            </div>
+          ) : (
+            <></>
+          )}
+        </div>
+      ) : (
+        description.text.slice(0, 500)
+      )}
 
       <span
         className="fw-bold"
         onClick={() => toggleText(isFull)}
         style={{ cursor: "pointer", color: "grey" }}
       >
-        {isFull ? "...See less" : "...See more"}
+        {isFull ? " See less" : "...See more"}
       </span>
     </div>
   );
