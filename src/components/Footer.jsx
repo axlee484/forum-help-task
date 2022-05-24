@@ -7,12 +7,7 @@ function Footer() {
   const [like, setLike] = useState(false);
   return (
     <div className="list-group list-group-flush">
-      <div className="list-group-item"></div>
-      <div
-        onClick={() => setLike(!like)}
-        style={{ cursor: "pointer" }}
-        className="list-group-item"
-      >
+      <div onClick={() => setLike(!like)} style={{ cursor: "pointer" }}>
         <Like like={like}></Like>
       </div>
     </div>
