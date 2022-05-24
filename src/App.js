@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import "./App.css";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
+import { user, type, time, tag, issue } from "./api";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="shadow-lg p-3 mb-5 bg-white rounded  Card card">
+        <Header user={user} tag={tag} time={time} type={type} />
+        <Body issue={issue} />
+        <Footer />
+      </div>
+      <div className="shadow-lg p-3 mb-5 bg-white rounded  Card card">
+        <Header user={user} tag={tag} time={time} type={type} />
+        <Body issue={issue} />
+        <Footer />
+      </div>
+      <div className="shadow-lg p-3 mb-5 bg-white rounded  Card card">
+        <Header user={user} tag={tag} time={time} type={type} />
+        <Body issue={issue} />
+        <Footer />
+      </div>
+      <div className="shadow-lg p-3 mb-5 bg-white rounded  Card card">
+        <Header user={user} tag={tag} time={time} type={type} />
+        <Body issue={issue} />
+        <Footer />
+      </div>
+    </>
   );
 }
 
