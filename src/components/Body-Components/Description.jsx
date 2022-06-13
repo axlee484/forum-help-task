@@ -18,7 +18,7 @@ function Description({ description }) {
               <img
                 src={description.image}
                 alt=""
-                style={{ width: "100%", borderRadius: "10px" }}
+                style={{ width: "70%", borderRadius: "10px" }}
               />
             </div>
           ) : (
